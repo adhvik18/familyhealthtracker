@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".BodyStatsActivity" >
+
+    <TextView
+        android:id="@+id/textViewWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="69dp"
+        android:text="Weight (Kg)"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#DF0101" />
+
+    <TextView
+        android:id="@+id/textViewHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewWeight"
+        android:layout_below="@+id/textViewWeight"
+        android:layout_marginTop="30dp"
+        android:text="Height (cm)"
+        android:textColor="#DF0101"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewHeight"
+        android:layout_below="@+id/textViewHeight"
+        android:layout_marginTop="31dp"
+        android:text="Chest (cm)"
+        android:textColor="#DF0101"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewWasit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/textViewChest"
+        android:layout_below="@+id/textViewChest"
+        android:layout_marginTop="26dp"
+        android:text="Waist (cm)"
+        android:textColor="#DF0101"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewHip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewWasit"
+        android:layout_below="@+id/textViewWasit"
+        android:layout_marginTop="29dp"
+        android:text="Hip (cm)"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#DF0101" />
+
+    <EditText
+        android:id="@+id/editTextWeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewWeight"
+        android:layout_toRightOf="@+id/textViewHeight"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+
+    <EditText
+        android:id="@+id/EditTextHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewChest"
+        android:layout_toRightOf="@+id/textViewWeight"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/EditTextChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewChest"
+        android:layout_alignLeft="@+id/editTextWeight"
+        android:layout_alignRight="@+id/EditTextHeight"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/EditTextWaist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewHip"
+        android:layout_toRightOf="@+id/textViewWeight"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/EditTextHip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textViewHip"
+        android:layout_alignLeft="@+id/EditTextHeight"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextWeight"
+        android:layout_marginBottom="17dp"
+        android:layout_toLeftOf="@+id/buttonCancel"
+        android:text="TextView"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonViewChart"
+        android:layout_alignBottom="@+id/buttonViewChart"
+        android:layout_alignParentRight="true"
+        android:background="#DF0101"
+        android:text="Cancel" />
+
+    <Button
+        android:id="@+id/buttonViewChart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonSubmit"
+        android:layout_alignBottom="@+id/buttonSubmit"
+        android:layout_toRightOf="@+id/textViewHip"
+        android:background="#DF0101"
+        android:text="View Chart" />
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textViewHip"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="36dp"
+        android:background="#DF0101"
+        android:text="Submit" />
+
+</RelativeLayout>
